@@ -71,7 +71,7 @@ public class SshDaemon implements Runnable {
 
     private void init(int port, String user, String password, boolean readOnly) {
         final var rootPath = System.getProperty("user.home");
-        final var path = rootPath + SSH_DAEMON;
+        final var path = rootPath + "/" + SSH_DAEMON;
         System.setProperty("user.home", rootPath);
 
         this.sshd = ServerBuilder
